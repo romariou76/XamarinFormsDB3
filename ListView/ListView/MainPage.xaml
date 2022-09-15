@@ -4,7 +4,7 @@
              x:Class="ListView.MainPage">
 
     <StackLayout>
-        <ListView>
+        <!--<ListView>
             <ListView.ItemsSource>
                 <x:Array Type="{x:Type x:String}">
                     <x:String>Mexico</x:String>
@@ -20,6 +20,17 @@
                     <x:String>Peru</x:String>
                 </x:Array>
             </ListView.ItemsSource>
-        </ListView>
+        </ListView>-->
+        <Label Text="Registro de Alumnos"
+            HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand"
+        />
+
+        <Entry x:Name="txtNombre" Placeholder="Nombre" />
+        <Entry x:Name="txtApellidoPaterno" Placeholder="ApellidoPaterno" />
+        <Entry x:Name="txtApellidoMaterno" Placeholder="ApellidoMaterno" />
+        <Entry x:Name="txtEdad" Placeholder="Edad" />
+        <Entry x:Name="txtEmail" Placeholder="Email" />
+        <Button x:Name="btnRegistrar" Text="Registrar Alumno" Clicked="btnRegistrar_Clicked"/>
     </StackLayout>
 </ContentPage>
