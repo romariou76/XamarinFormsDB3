@@ -21,17 +21,28 @@
                 </x:Array>
             </ListView.ItemsSource>
         </ListView>-->
-        <Label Text="Registro de Alumnos"
+        <StackLayout.Background>
+            <SolidColorBrush Color="White"/>
+        </StackLayout.Background>
+        <Label Text="Registro de Senatinos"
+               FontSize="30"
+               TextColor="Black"
+               Margin="0, 0, 0, 20"
             HorizontalOptions="Center"
-               VerticalOptions="CenterAndExpand"
+            VerticalOptions="CenterAndExpand"
         />
 
-        <Entry x:Name="txtNombre" Placeholder="Nombre" />
-        <Entry x:Name="txtApellidoPaterno" Placeholder="Apellido Paterno" />
-        <Entry x:Name="txtApellidoMaterno" Placeholder="Apellido Materno" />
-        <Entry x:Name="txtEdad" Placeholder="Edad" />
-        <Entry x:Name="txtEmail" Placeholder="Email" />
-        <Button x:Name="btnRegistrar" Text="Registrar Alumno" Clicked="btnRegistrar_Clicked"/>
+        <Label Text="Nombre:" TextColor="Black" FontSize="20" Margin="15, 0, 0, 0"/>
+        <Entry x:Name="txtNombre" Placeholder="nombre" PlaceholderColor="LightGray" TextColor="Black" Margin="15, 0, 0, 0"/>
+        <Label Text="Apellido Paterno:" TextColor="Black" FontSize="20" Margin="15, 0, 0, 0"/>
+        <Entry x:Name="txtApellidoPaterno" Placeholder="apellido Paterno" PlaceholderColor="LightGray" TextColor="black" Margin="15, 0, 0, 0" />
+        <Label Text="Apellido Materno:" TextColor="Black" FontSize="20" Margin="15, 0, 0, 0"/>
+        <Entry x:Name="txtApellidoMaterno" Placeholder="apellido Materno" PlaceholderColor="LightGray" TextColor="black" Margin="15, 0, 0, 0"/>
+        <Label Text="Edad:" TextColor="Black" FontSize="20" Margin="15, 0, 0, 0"/>
+        <Entry x:Name="txtEdad" Placeholder="edad" PlaceholderColor="LightGray" TextColor="black" Margin="15, 0, 0, 0" />
+        <Label Text="Email:" TextColor="Black" FontSize="20" Margin="15, 0, 0, 0"/>
+        <Entry x:Name="txtEmail" Placeholder="email" PlaceholderColor="LightGray" TextColor="black" Margin="15, 0, 0, 0"/>
+        <Button x:Name="btnRegistrar" HorizontalOptions="Center" WidthRequest="350" Text="Registrar Alumno" Clicked="btnRegistrar_Clicked" BackgroundColor="Purple" TextColor="White" BorderColor="Purple" Margin="5, 0, 0, 10"/>
 
         <ListView x:Name="lstAlumnos">
             <ListView.ItemTemplate>
@@ -52,13 +63,13 @@
                                 <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
-                            
-                            <Label Text="{Binding IdAlumno}" Grid.Row="0" Grid.Column="0" TextColor="Blue"/>
-                            <Label Text="{Binding Nombre}" Grid.Row="0" Grid.Column="1" TextColor="White"/>
-                            <Label Text="{Binding ApellidoPaterno}" Grid.Row="0" Grid.Column="2" TextColor="Gray"/>
-                            <Label Text="{Binding ApellidoMaterno}" Grid.Row="0" Grid.Column="3" TextColor="Gray"/>
-                            <Label Text="{Binding Edad}" Grid.Row="0" Grid.Column="4" TextColor="Orange"/>
-                            <Label Text="{Binding Email}" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" TextColor="Green"/>
+
+                            <Label Text="{Binding IdAlumno}" Grid.Row="0" Grid.Column="0" TextColor="black" FontSize="16"/>
+                            <Label Text="{Binding Nombre}" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" TextColor="Black" FontSize="16"/>
+                            <Label Text="{Binding ApellidoPaterno}" Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="4" TextColor="black" FontSize="16"/>
+                            <!--<Label Text="{Binding ApellidoMaterno}" Grid.Row="0" Grid.Column="3" TextColor="black"/>-->
+                            <!--<Label Text="{Binding Edad}" Grid.Row="0" Grid.Column="4" TextColor="Orange"/>-->
+                            <!--<Label Text="{Binding Email}" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" TextColor="Green"/>-->
                             
                         </Grid>
                     </ViewCell>
