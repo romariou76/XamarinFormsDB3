@@ -35,7 +35,11 @@ namespace ListView
                 txtEdad.Text = "";
                 txtEmail.Text = "";
                 await DisplayAlert("Registro", "Se guardo de manera exitosa", "ok");
-
+                var alumnoList= await App.SQLiteDB.GetAlumnosAsync();
+                if (alumnoList != null)
+                {
+                    lstAlumnos.ItemsSource = alumnoList;
+                }
             }
             else
             {

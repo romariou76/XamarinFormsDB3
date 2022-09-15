@@ -29,5 +29,18 @@ namespace ListView.data
             }
 
         }
+
+        // Metodo para recuperar los alumnos por id
+        // <param name="idAlumno">Id del alumno que se rquiere</param>
+        // <returns></returns>
+        public Task<List<Alumno>> GetAlumnosAsync()
+        {
+            return db.Table<Alumno>().ToListAsync();
+        }
+
+        public Task<Alumno> GetAlumnoByIdAsync(int idAlumno)
+        {
+            return db.Table<Alumno>().Where(a => a.IdAlumno == idAlumno).FirstOrDefaultAsync();
+        }
     }
 }
